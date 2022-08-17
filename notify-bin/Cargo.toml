@@ -1,0 +1,22 @@
+[package]
+name = "notify-bin"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "*"
+clap = { version = "*", features = ["derive"] }
+hostname = "*"
+notify = { path = "../notify" }
+tokio = { version = "*", features = ["full"] }
+
+[build-dependencies]
+anyhow = "*"
+configparser = "*"
+notify = { path = "../notify" }
+
+[[bin]]
+name = "notify"
+path = "src/main.rs"

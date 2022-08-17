@@ -1,0 +1,4 @@
+/target
+credentials.ini
+.DS_Store
+*.log
