@@ -42,6 +42,8 @@ async fn main() -> Result<()> {
 
     let message = if let Some(photo_path) = args.photo {
         Message::new_photo_caption(photo_path, body).await?
+    } else if let Some(body_path) = args.text_file {
+        Message::new_title_body_file(args.title, body_path).await?
     } else {
         Message::new_title_body(args.title, body)
     };
