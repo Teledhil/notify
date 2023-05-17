@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Dummy credentials
+      run: cp .github/dummy_credentials.ini notify-bin/credentials.ini
     - name: Build
       run: cargo build --verbose
     - name: Run tests
